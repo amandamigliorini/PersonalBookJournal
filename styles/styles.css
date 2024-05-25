@@ -1,0 +1,112 @@
+:root{
+    --primary-color: #101d21;
+    --secondary-color: #335c67;
+    --vanilla-color: #fff3b0;
+    --tertiary-color: #e09f3e;
+    --auburn-color: #9E2A2B;
+    --choco-color: #540B0E;
+
+    --roboto: "Roboto", sans-serif;
+    --roboto-slab: "Roboto Slab", serif;
+    --playfair: "Playfair Display", serif;
+    --poetsen: "Poetsen One", sans-serif; 
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    font-family: var(--roboto);
+    color: var(--vanilla-color);
+    background-color: var(--choco-color);
+}
+
+header{
+    display: flex;
+    align-items:end;
+    text-align: center;
+    font-family: var(--poetsen);
+    font-size: 1.5rem;
+    color: var(--tertiary-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.logo{
+    height: 150px;
+    width: auto;
+    margin: 1rem 1rem 2rem 1rem;
+    border-radius: 30%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+    margin-bottom: 2rem;
+}
+
+nav a{
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--vanilla-color);
+    margin: .1rem;
+    background-color: #101d21;
+}
+
+main{
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.heroImage{
+    width: 100%;
+    height: auto;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.card{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 2rem;
+    text-align: center;
+    background-color: var(--tertiary-color);
+    border: 1px solid #101d21;
+    padding: 6rem 3rem;
+    width: 20%;
+    height: auto;
+    box-shadow: 1px 3px 3px 2px var(--primary-color);
+    border-radius: 5%;
+    margin: 1rem;
+}
+
+.card:hover{
+    background-color: var(--secondary-color);
+    color: var(--vanilla-color);
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.titleFooter{
+    text-align: center;
+    padding: 1rem;
+}
+
+.logoFooter{
+    height: 100px;
+    width: auto;
+    border-radius: 30%;
+}
