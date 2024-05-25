@@ -40,7 +40,7 @@ function Footer() {
   });
 
   const name = createElement('h3', {
-    textContent: `Amanda C S migliorini`,
+    textContent: `Amanda C S Migliorini`,
   });
 
   const copyright = createElement('span', {

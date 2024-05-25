@@ -53,7 +53,6 @@ nav a{
     text-decoration: none;
     color: var(--vanilla-color);
     margin: .1rem;
-    background-color: #101d21;
 }
 
 main{
@@ -84,12 +83,11 @@ main{
     padding: 6rem 2rem;
     width: 25%;
     box-shadow: 1px 3px 3px 2px var(--primary-color);
-    border-radius: 5%;
 }
 
 .card a{
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--vanilla-color);
     font-size: 2rem;
 }
 
@@ -109,6 +107,7 @@ footer{
 .titleFooter{
     text-align: center;
     padding: 1rem;
+    color: var(--vanilla-color);
 }
 
 .logoFooter{
