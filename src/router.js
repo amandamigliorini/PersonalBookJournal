@@ -5,7 +5,7 @@ import { createElement } from './utils';
 import Home from './Home';
 import Favorites from './Favorites';
 import Notes from './Notes';
-//import SearchBooks from './SearchBooks';
+import SearchBooks from './SearchBooks';
 
 export function initRouter(mainView) {
   function updateView(newView) {
@@ -27,9 +27,9 @@ export function initRouter(mainView) {
         updateView(Notes());
         break;
       
-      //case '#/SearchBooks':
-      //  updateView(SearchBooks());
-      //  break;
+      case '#/SearchBooks':
+        updateView(SearchBooks());
+        break;
         
       default:
        updateView(createElement('h3', { textContent: '404 Page Not Found' }));

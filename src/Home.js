@@ -8,22 +8,19 @@ function Home() {
     className: 'heroImage'
    });
 
-   const searchCard = createElement('a', {
-    className: 'card', 
-    textContent: 'Search Books',
-    href: '/#/SearchBooks'
+   const searchCard = createElement('div', {
+    className: 'card',
+    innerHTML: `<a href="/#/SearchBooks">Search Books</a>` 
    });
 
-   const favoriteCard = createElement('a', {
+   const favoriteCard = createElement('div', {
     className: 'card', 
-    textContent: 'Favorites',
-    href: '/#/Favorites'
+    innerHTML: `<a href="/#/Favorites">Favorites</a>`
    });
 
-   const notesCard = createElement('a', {
+   const notesCard = createElement('div', {
     className: 'card', 
-    textContent: 'Notes',
-    href: '/#/Notes'
+    innerHTML: `<a href="/#/Notes">Notes</a>`
    });
 
   const cards = createElement('div', {
