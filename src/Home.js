@@ -27,7 +27,7 @@ function Home() {
     className: 'cards',
   }, [searchCard, favoriteCard, notesCard]);
 
-  return createElement('div', {}, [heroImage, cards]);
+  return createElement('div', {className: "mainDiv"}, [heroImage, cards]);
 }
 
 export default Home;
