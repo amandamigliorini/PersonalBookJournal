@@ -37,7 +37,7 @@ function SearchBooks() {
   const searchButton = createElement('button',{
     className: "searchButton",
     id: "searchButton",
-    textContent: "SEARCH"
+    textContent: "Get Books!"
   });
 
  /* const categoryDiv = createElement('div', {
