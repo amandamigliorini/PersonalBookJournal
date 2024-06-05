@@ -3,7 +3,7 @@ import { fetchAuthorDetails } from './Search.mjs';
 
 function removeFromFavorites(bookKey) {
     let favorites = getLocalStorage('favorites') || [];
-    favorites = favorites.filter(fav => fav.key !== bookKey);
+    favorites = favorites.filter(favorite => favorite.key !== bookKey);
     setLocalStorage('favorites', favorites);
     
     const favoritesList = document.querySelector('.favorites-list');
@@ -20,7 +20,7 @@ export function renderFavorites() {
     } else {
       favorites.forEach(async book => {
 
-        const authorElement = createElement('p', { textContent: 'Author: Loading...' });
+        const authorElement = createElement('p', { textContent: 'Loading...' });
 
         let authorNames = "Unknown Author";
         if (book.authors && book.authors.length > 0) {
@@ -35,10 +35,7 @@ export function renderFavorites() {
 
 
         const bookElement = createElement('div', { className: 'favorite-book' }, [
-          createElement('h3', { textContent: book.title }),
-          authorElement,
-          createElement('button', {
-            textContent: 'Remove from Favorites',
+          createElement('h3', { textContent: book.title }), authorElement, createElement('button', {textContent: 'Remove',
             className: 'remove-from-favorites-button'
           })
         ]);

@@ -29,7 +29,6 @@ header{
     text-align: center;
     font-family: var(--poetsen);
     font-size: 1.5rem;
-    background-color: var(--tertiary-color);
     border-bottom: 1px solid var(--secondary-color);
     background-color:var(--primary-color);
     opacity: .9;
@@ -40,6 +39,10 @@ header{
     width: auto;
     margin: 1rem 1rem 2rem 1rem;
     border-radius: 30%;
+}
+
+.logo:hover, .logoFooter:hover{
+    animation: imageAnimation .5s;
 }
 
 nav{
@@ -147,10 +150,24 @@ footer{
     font-family: var(--roboto);
     border-radius: 5px;
 }
+
+.searchInput{
+    height: 2rem;
+}
+
+.searchInput:focus{
+    border: 1px dotted var(--auburn-color);
+}
+
 .searchButton{
     background-color:#540B0E;
     color:var(--tertiary-color);
     padding: .3rem;
+    cursor: pointer;
+}
+
+.searchButton:hover{
+    background-color: var(--auburn-color);
 }
 
 .results {
@@ -254,13 +271,16 @@ footer{
     text-align: justify;
 }
 
-.favorites-page {
-    padding: 2rem;
-    color: var(--vanilla-color);
-    background-color: var(--primary-color);
-    min-height: 100vh;
+.favorites {
+    text-align: center;
+    margin: auto;
 }
   
+.favorites h2, .mainSearch h2{
+    font-family: var(--poetsen);
+    font-weight: 300;
+}
+
 .favorites-list {
     display: flex;
     flex-direction: column;
@@ -296,13 +316,82 @@ footer{
     background-color: var(--auburn-color);
 }
 
+@keyframes imageAnimation {
+    0% {
+        transform: scale(1, 1);
+      }
+      50% {
+        transform: scale(1.5, 1.5);
+      }
+      100% {
+        transform: scale(1, 1);
+      }
+  }
+
 @media (max-width: 768px) {
+    header{
+        display: block;
+    }
+    
+    .cards{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem;
+    }
+
+    .card{
+        margin: auto;
+        margin-bottom: 2rem;
+        width: 50%;
+    }
+
+    .search{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .searchDiv{
+        width: 75%;
+    }
+
     .resultCard {
         width: calc(50% - 2rem); 
     }
 }
 
 @media (max-width: 480px) {
+
+    footer{
+        justify-content: center;
+    }
+
+    .logoFooter{
+        display: none;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a{
+        text-align: center;
+        border: 1px solid var(--tertiary-color);
+        width: 100%;
+        background-color: var(--choco-color);
+        font-size: 1rem;
+        color: var(--tertiary-color);
+    }
+
+    .card a{
+        font-size: 1rem;
+    }
+
+    .searchDiv{
+        width: 75%;
+    }
+
     .resultCard {
         width: calc(100% - 2rem); 
     }

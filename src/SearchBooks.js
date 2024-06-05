@@ -10,7 +10,7 @@ function SearchBooks() {
     name: "searchInput",
     id: "searchInput",
     size: "50",
-    value: "The Lord of The Rings"
+    placeholder: "The Lord of The Rings"
   });
 
   const searchButton = createElement('button',{
