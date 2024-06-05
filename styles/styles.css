@@ -201,6 +201,59 @@ footer{
     border-radius: 4px;
 }
 
+.book-details {
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.book-details h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.book-details p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.book-details .book-cover {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.book-details .add-to-favorites-button {
+    background-color: var(--choco-color);
+    color: var(--vanilla-color);
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.book-details .add-to-favorites-button:hover {
+    background-color: var(--auburn-color);
+}
+
+.book-details .description {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: var(--choco-color);
+    text-align: justify;
+}
+
 @media (max-width: 768px) {
     .resultCard {
         width: calc(50% - 2rem); 

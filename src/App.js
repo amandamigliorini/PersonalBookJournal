@@ -2,6 +2,7 @@ import { createElement } from './utils';
 import { initRouter } from './router';
 import logoSrc from '../public/images/LogoYB.webp';
 
+
 function Header(mainDiv) {
   const logo = createElement('img', {
     src: logoSrc,
@@ -21,13 +22,9 @@ function Header(mainDiv) {
   const favorites = createElement('a', {
     href: '/#/Favorites',
     textContent: 'Favorites',
-  });
-  const notes = createElement('a', {
-    href: '/#/Notes',
-    textContent: 'Notes',
-  });
+  })
 
-  const nav = createElement('nav', {}, [home, search, favorites, notes]);
+  const nav = createElement('nav', {}, [home, search, favorites]);
 
   return createElement('header', {}, [logo, nav]);
 }

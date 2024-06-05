@@ -18,14 +18,9 @@ function Home() {
     innerHTML: `<a href="/#/Favorites">Favorites</a>`
    });
 
-   const notesCard = createElement('div', {
-    className: 'card', 
-    innerHTML: `<a href="/#/Notes">Notes</a>`
-   });
-
   const cards = createElement('div', {
     className: 'cards',
-  }, [searchCard, favoriteCard, notesCard]);
+  }, [searchCard, favoriteCard]);
 
   return createElement('div', {className: "mainDiv"}, [heroImage, cards]);
 }

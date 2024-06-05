@@ -23,3 +23,31 @@ export function createElement(type, props = {}, children = []) {
   
     return element;
   }
+
+  export function convertToJson(res) {
+    if (res.ok) {
+      return res.json();
+    } else {
+      res.json()
+      throw { name: 'servicesError', message: jsonResponse };
+    }
+  }
+
+  // retrieve data from localstorage
+export function getLocalStorage(key) {
+  return JSON.parse(localStorage.getItem(key));
+}
+// save data to local storage
+export function setLocalStorage(key, data) {
+  localStorage.setItem(key, JSON.stringify(data));
+}
+
+// retrieve data from sessionStorage
+export function getSessionStorage(key) {
+  return JSON.parse(sessionStorage.getItem(key));
+}
+
+// save data to session storage
+export function setSessionStorage(key, data) {
+  sessionStorage.setItem(key, JSON.stringify(data));
+}
