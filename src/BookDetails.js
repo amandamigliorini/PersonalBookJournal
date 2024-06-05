@@ -1,14 +1,14 @@
 import { createElement } from './utils';
-import { fetchAuthorDetails } from './Search.mjs';
+import { fetchAuthorDetails, addToFavorites } from './Search.mjs';
+
 
 async function BookDetails(book) {
   const addToFavoritesButton = createElement('button', {
     textContent: 'Add to Favorites',
-    className: 'add-to-favorites-button',
-    onclick: () => {
-      console.log(`${book.title} added to favorites`);
-    }
+    className: 'add-to-favorites-button'
   });
+
+  addToFavoritesButton.addEventListener('click', () => addToFavorites(book));
 
   const authorElement = createElement('p', { textContent: 'Author: Loading...' });
 
@@ -19,7 +19,6 @@ async function BookDetails(book) {
     authorNames = authorNamesArray.join(", ");
   }
 
-
   authorElement.textContent = `Author: ${authorNames}`;
 
   let coverUrl = "#";
@@ -29,16 +28,14 @@ async function BookDetails(book) {
     coverUrl = `http://covers.openlibrary.org/b/id/${book.covers[0]}-L.jpg`;
   }
 
-  console.log("Cover URL:", coverUrl); 
-
   const coverElement = createElement('img', {
     src: coverUrl,
     alt: 'Book Cover',
-    className: 'book-cover',
-    onerror: () => {
-      console.error("Error loading image:", coverUrl);
-      coverElement.src = "#"; 
-    }
+    className: 'book-cover'
+  });
+
+  coverElement.addEventListener('error', () => {
+    coverElement.src = "#";
   });
 
   return createElement('div', { className: 'book-details' }, [

@@ -112,3 +112,14 @@ export async function fetchAuthorDetails(authorKey) {
         return "Unknown Author";
     }
 }
+
+export function addToFavorites(book) {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    if (!favorites.some(fav => fav.key === book.key)) {
+      favorites.push(book);
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+      console.log(`${book.title} added to favorites`);
+    } else {
+      console.log(`${book.title} is already in favorites`);
+    }
+  }

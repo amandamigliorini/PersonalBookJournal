@@ -254,6 +254,48 @@ footer{
     text-align: justify;
 }
 
+.favorites-page {
+    padding: 2rem;
+    color: var(--vanilla-color);
+    background-color: var(--primary-color);
+    min-height: 100vh;
+}
+  
+.favorites-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+  
+.favorite-book {
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--secondary-color);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.favorite-book h3 {
+    color: var(--primary-color);
+}
+
+.favorite-book p {
+    color: var(--secondary-color);
+}
+
+.favorite-book button {
+    background-color: var(--choco-color);
+    color: var(--vanilla-color);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.favorite-book button:hover {
+    background-color: var(--auburn-color);
+}
+
 @media (max-width: 768px) {
     .resultCard {
         width: calc(50% - 2rem); 
