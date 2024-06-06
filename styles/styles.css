@@ -23,6 +23,7 @@ body {
     background-color: var(--primary-color);
 }
 
+
 header{
     display: flex;
     align-items:end;
@@ -72,6 +73,7 @@ main{
     width: 100%;
     height: auto;
     box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+    animation: none;
 }
 
 .cards{
@@ -157,6 +159,7 @@ footer{
 
 .searchInput:focus{
     border: 1px dotted var(--auburn-color);
+    height: 2.5rem;
 }
 
 .searchButton{
